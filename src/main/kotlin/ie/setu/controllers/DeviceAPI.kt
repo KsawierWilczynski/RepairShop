@@ -17,4 +17,7 @@ class DeviceAPI {
 
     fun removeDevice(index: Int): Device = deviceList.removeAt(index)
 
+    fun fixDevice(index: Int) {
+        deviceList[index].isFixed = true
+    }
 }
