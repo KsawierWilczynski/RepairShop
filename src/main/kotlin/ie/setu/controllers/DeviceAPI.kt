@@ -7,8 +7,8 @@ import java.util.LinkedList
 class DeviceAPI {
     private var deviceList = LinkedList<Device>()
 
-    fun addDevice(device: Device) {
-        deviceList.add(device)
+    fun addDevice(device: Device):Boolean {
+        return deviceList.add(device)
     }
 
     fun listOfDevices(): String = if (deviceList.isEmpty()) "No Devices Stores" else formatListString(deviceList)
