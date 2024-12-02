@@ -6,6 +6,6 @@ data class Device(
     var serialNo: String,
     val type: DeviceType,
     var issue: String,
-    var isFixed: Boolean,
-    val employee: Employee
+    val employee: Employee,
+    var isFixed: Boolean = false
 )
