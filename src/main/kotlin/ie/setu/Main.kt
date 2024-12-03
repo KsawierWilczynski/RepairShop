@@ -105,7 +105,13 @@ fun addEmployee() {
 }
 
 fun removeEmployee() {
-
+    println(employeeAPI.listOfEmployees())
+    val index = readNextInt("Please enter employee index to remove:")
+    if (index < 0 && index+1 >= employeeAPI.numOfEmployees()) {
+        println("Invalid Employee Index")
+    } else {
+        println("Removed: ${employeeAPI.removeEmployee(index)}")
+    }
 }
 
 fun addRepair() {
