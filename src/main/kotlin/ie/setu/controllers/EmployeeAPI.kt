@@ -7,8 +7,8 @@ import java.util.*
 class EmployeeAPI {
     private var employeeList = LinkedList<Employee>()
 
-    fun addEmployee(employee: Employee) {
-        employeeList.add(employee)
+    fun addEmployee(employee: Employee):Boolean {
+         return employeeList.add(employee)
     }
 
     fun listOfEmployees(): String = if (employeeList.isEmpty()) "No Employees" else formatListString(employeeList)
