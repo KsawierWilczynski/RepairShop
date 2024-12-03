@@ -26,6 +26,7 @@ fun start() {
                         1 -> addRepair()
                         2 -> println(deviceAPI.listOfDevices())
                         3 -> removeRepair()
+                        4 -> getDeviceByEmployee()
                         0 -> println("Exiting Repairs...")
                         else -> println("Invalid Option Entered: $option")
                     }
@@ -71,7 +72,8 @@ fun repairMenu(): Int {
          > | NOTE MENU                     |
          > |   1) Add a repair             |
          > |   2) List repairs             |
-         > |   2) Remove a repair          |
+         > |   3) Remove a repair          |
+         > |   4) List repairs by employee |
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
@@ -87,7 +89,7 @@ fun employeeMenu(): Int {
          > | NOTE MENU                     |
          > |   1) Add an employee          |
          > |   2) List employees           |
-         > |   2) Remove an employee       |
+         > |   3) Remove an employee       |
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
@@ -107,12 +109,16 @@ fun addEmployee() {
 }
 
 fun removeEmployee() {
-    println(employeeAPI.listOfEmployees())
-    val index = readNextInt("Please enter employee index to remove: ")
-    if (index < 0 && index+1 >= employeeAPI.numOfEmployees()) {
-        println("Invalid Employee Index")
+    if (employeeAPI.numOfEmployees() > 0) {
+        println(employeeAPI.listOfEmployees())
+        val index = readNextInt("Please enter employee index to remove: ")
+        if (index < 0 && index + 1 >= employeeAPI.numOfEmployees()) {
+            println("Invalid Employee Index")
+        } else {
+            println("Removed: ${employeeAPI.removeEmployee(index)}")
+        }
     } else {
-        println("Removed: ${employeeAPI.removeEmployee(index)}")
+        println("No employees stored")
     }
 }
 
@@ -144,11 +150,33 @@ fun addRepair() {
 }
 
 fun removeRepair() {
-    println(deviceAPI.listOfDevices())
-    val index = readNextInt("Please enter device index to remove: ")
-    if (index < 0 && index >= deviceAPI.numOfDevices()) {
-        println("Invalid Device Index")
+    if(deviceAPI.numOfDevices() > 0) {
+        println(deviceAPI.listOfDevices())
+        val index = readNextInt("Please enter device index to remove: ")
+        if (index < 0 || index >= deviceAPI.numOfDevices()) {
+            println("Invalid Device Index")
+        } else {
+            println("Removed: ${deviceAPI.removeDevice(index)}")
+        }
     } else {
-        println("Removed: ${deviceAPI.removeDevice(index)}")
+        println("No Devices")
+    }
+}
+
+fun getDeviceByEmployee() {
+    if (employeeAPI.numOfEmployees() > 0 || deviceAPI.numOfDevices() > 0) {
+        var input: Int = -1
+        while (input < 0 || input >= employeeAPI.numOfEmployees()) {
+            println(employeeAPI.listOfEmployees())
+            input = readNextInt("Please enter employee index")
+        }
+        val employee = employeeAPI.getEmployeeByIndex(input);
+        if (employee == null) {
+            println("Something has gone wrong")
+            return;
+        }
+        println(deviceAPI.getDeviceByEmployee(employee))
+    } else {
+        println("No selections available")
     }
 }
