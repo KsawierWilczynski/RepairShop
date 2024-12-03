@@ -20,6 +20,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.16")
     implementation("com.thoughtworks.xstream:xstream:1.4.21")
     implementation("org.codehaus.jettison:jettison:1.5.4")
+    implementation("org.jetbrains.dokka:dokka-gradle-plugin:1.9.20")
 }
 
 tasks.test {
