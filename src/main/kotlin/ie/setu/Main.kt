@@ -2,7 +2,11 @@ package ie.setu
 
 import ie.setu.controllers.DeviceAPI
 import ie.setu.controllers.EmployeeAPI
+import ie.setu.models.Device
+import ie.setu.models.Employee
+import ie.setu.types.DeviceType
 import ie.setu.utils.readNextInt
+import ie.setu.utils.readNextLine
 
 private val deviceAPI = DeviceAPI()
 private val employeeAPI = EmployeeAPI()
@@ -20,7 +24,7 @@ fun start() {
                     val repairOption = repairMenu()
                     when (repairOption) {
                         1 -> addRepair()
-                        2 -> deviceAPI.listOfDevices()
+                        2 -> println(deviceAPI.listOfDevices())
                         3 -> removeRepair()
                         0 -> println("Exiting Repairs...")
                         else -> println("Invalid Option Entered: $option")
@@ -31,7 +35,7 @@ fun start() {
                     val employeeOption = employeeMenu()
                     when (employeeOption) {
                         1 -> addEmployee()
-                        2 -> employeeAPI.listOfEmployees()
+                        2 -> println(employeeAPI.listOfEmployees())
                         3 -> removeEmployee()
                         0 -> println("Exiting Employees...")
                         else -> println("Invalid Option Entered: $option")
@@ -92,17 +96,59 @@ fun employeeMenu(): Int {
 }
 
 fun addEmployee() {
-
+    val pps = readNextInt("What's the Employee's PPS Number? ")
+    val name = readNextLine("What's the Employee's Name? ")
+    val phoneNo = readNextLine("What's the Employee's Phone Number? ")
+    if (employeeAPI.addEmployee(Employee(pps, name, phoneNo))) {
+        println("Successfully added employee")
+    } else {
+        println("An Error has occurred")
+    }
 }
 
 fun removeEmployee() {
-
+    println(employeeAPI.listOfEmployees())
+    val index = readNextInt("Please enter employee index to remove: ")
+    if (index < 0 && index+1 >= employeeAPI.numOfEmployees()) {
+        println("Invalid Employee Index")
+    } else {
+        println("Removed: ${employeeAPI.removeEmployee(index)}")
+    }
 }
 
 fun addRepair() {
-
+    val serialNum = readNextLine("Please enter device serial number: ")
+    var deviceType = readNextInt("Please Select device type:\n1. Phone\n2. Tablet\n3. Laptop\n4. Desktop\n")
+    while (0 > deviceType || deviceType > 4) {
+        println("Invalid deviceType")
+        deviceType = readNextInt("Please Select device type:\n1. Phone\n2. Tablet\n3. Laptop\n4. Desktop\n")
+    }
+    var deviceTypeConstructor: DeviceType = DeviceType.PHONE
+    when (deviceType) {
+        1 -> deviceTypeConstructor = DeviceType.PHONE
+        2 -> deviceTypeConstructor = DeviceType.TABLET
+        3 -> deviceTypeConstructor = DeviceType.LAPTOP
+        4 -> deviceTypeConstructor = DeviceType.DESKTOP
+    }
+    val issue = readNextLine("Please enter issue description: ")
+    var input: Int
+    var employee: Employee? = null
+    while (employee == null) {
+        println(employeeAPI.listOfEmployees())
+        input = readNextInt("Please enter index of employee selected: ")
+        employee = employeeAPI.getEmployeeByIndex(input)
+    }
+    if (deviceAPI.addDevice(Device(serialNum, deviceTypeConstructor, issue, employee))) {
+        println("Repair successfully added")
+    }
 }
 
 fun removeRepair() {
-
+    println(deviceAPI.listOfDevices())
+    val index = readNextInt("Please enter device index to remove: ")
+    if (index < 0 && index+1 >= deviceAPI.numOfDevices()) {
+        println("Invalid Device Index")
+    } else {
+        println("Removed: ${deviceAPI.removeDevice(index)}")
+    }
 }
