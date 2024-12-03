@@ -30,7 +30,7 @@ class DeviceAPI {
     fun getDeviceByEmployee(employee: Employee): String = if (deviceList.isEmpty()) "No Devices Stores" else formatListString(deviceList.stream().filter{it.employee == employee}.toList())
 
     fun fixDevice(index: Int) {
-        deviceList[index].isFixed = true
+        getDeviceByIndex(index)?.isFixed = true;
     }
 
     @Throws(Exception::class)
