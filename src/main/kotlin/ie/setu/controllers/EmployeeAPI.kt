@@ -15,7 +15,7 @@ class EmployeeAPI {
 
     fun numOfEmployees(): Int = employeeList.size
 
-    fun removeEmployee(index: Int): Employee? = if (index >= 0 && index+1 >= employeeList.size) null else employeeList.removeAt(index)
+    fun removeEmployee(index: Int): Employee? = if (index < 0 && index+1 >= employeeList.size) null else employeeList.removeAt(index)
 
-    fun getEmployeeByIndex(index: Int): Employee? = if (index >= 0 && index+1 >= employeeList.size) null else employeeList[index]
+    fun getEmployeeByIndex(index: Int): Employee? = if (index < 0 && index+1 >= employeeList.size) null else employeeList[index]
 }
