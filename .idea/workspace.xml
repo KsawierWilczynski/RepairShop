@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Add get device by type">
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update persistence and serializer for new models">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +65,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "More-Filtering",
+    "git-widget-placeholder": "Persistance",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu/utils",
+    "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +78,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ksawier\OneDrive - South East Technological University (Waterford Campus)\SDT1\Week02\RepairShop\src\main\kotlin\ie\setu" />
       <recent name="C:\Users\Ksawier\OneDrive - South East Technological University (Waterford Campus)\SDT1\Week02\RepairShop\src\main\kotlin\ie\setu\utils" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -94,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
@@ -195,7 +200,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733249964051</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add persistence serializer">
+      <option name="closed" value="true" />
+      <created>1733251344537</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251344537</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add persistence dependencies">
+      <option name="closed" value="true" />
+      <created>1733251356876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251356876</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update persistence and serializer for new models">
+      <option name="closed" value="true" />
+      <created>1733251597886</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251597886</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +254,9 @@
     <MESSAGE value="list repairs by employee" />
     <MESSAGE value="set device to repaired function" />
     <MESSAGE value="Add get device by type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add get device by type" />
+    <MESSAGE value="Add persistence serializer" />
+    <MESSAGE value="Add persistence dependencies" />
+    <MESSAGE value="Update persistence and serializer for new models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update persistence and serializer for new models" />
   </component>
 </project>
