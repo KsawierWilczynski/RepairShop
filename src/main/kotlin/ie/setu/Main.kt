@@ -2,7 +2,10 @@ package ie.setu
 
 import ie.setu.controllers.DeviceAPI
 import ie.setu.controllers.EmployeeAPI
+import ie.setu.models.Employee
+import ie.setu.utils.readIntNotNull
 import ie.setu.utils.readNextInt
+import ie.setu.utils.readNextLine
 
 private val deviceAPI = DeviceAPI()
 private val employeeAPI = EmployeeAPI()
@@ -92,7 +95,14 @@ fun employeeMenu(): Int {
 }
 
 fun addEmployee() {
-
+    val pps = readNextInt("What's the Employee's PPS Number?")
+    val name = readNextLine("What's the Employee's Name?")
+    val phoneNo = readNextLine("What's the Employee's Phone Number?")
+    if (employeeAPI.addEmployee(Employee(pps, name, phoneNo))) {
+        println("Successfully added employee")
+    } else {
+        println("An Error has occurred")
+    }
 }
 
 fun removeEmployee() {
