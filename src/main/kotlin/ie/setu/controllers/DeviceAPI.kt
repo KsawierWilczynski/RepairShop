@@ -103,7 +103,6 @@ class DeviceAPI {
             )
         }
 
-
     /**
      * Marks a device as fixed based on its index.
      *
