@@ -27,6 +27,7 @@ fun start() {
                         2 -> println(deviceAPI.listOfDevices())
                         3 -> removeRepair()
                         4 -> getDeviceByEmployee()
+                        5 -> setDeviceToRepaired()
                         0 -> println("Exiting Repairs...")
                         else -> println("Invalid Option Entered: $option")
                     }
@@ -74,6 +75,7 @@ fun repairMenu(): Int {
          > |   2) List repairs             |
          > |   3) Remove a repair          |
          > |   4) List repairs by employee |
+         > |   5) Finish a repair          |
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
@@ -164,7 +166,7 @@ fun removeRepair() {
 }
 
 fun getDeviceByEmployee() {
-    if (employeeAPI.numOfEmployees() > 0 || deviceAPI.numOfDevices() > 0) {
+    if (employeeAPI.numOfEmployees() > 0 && deviceAPI.numOfDevices() > 0) {
         var input: Int = -1
         while (input < 0 || input >= employeeAPI.numOfEmployees()) {
             println(employeeAPI.listOfEmployees())
@@ -178,5 +180,18 @@ fun getDeviceByEmployee() {
         println(deviceAPI.getDeviceByEmployee(employee))
     } else {
         println("No selections available")
+    }
+}
+
+fun setDeviceToRepaired() {
+    if (deviceAPI.numOfDevices() > 0) {
+        println(deviceAPI.listOfDevices())
+        val index = readNextInt("Please enter device index to fix: ")
+        if (index < 0 || index >= deviceAPI.numOfDevices()) {
+            println("Invalid Device Index")
+        } else {
+            println("Set device to repaired...")
+            deviceAPI.fixDevice(index)
+        }
     }
 }
