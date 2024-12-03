@@ -2,11 +2,15 @@ package ie.setu.controllers
 
 import ie.setu.models.Device
 import ie.setu.models.Employee
+import ie.setu.persistance.JSONSerializer
 import ie.setu.types.DeviceType
 import ie.setu.utils.formatListString
+import java.io.File
 import java.util.LinkedList
 
 class DeviceAPI {
+
+    private var serializer: JSONSerializer = JSONSerializer(File("Devices.json"))
     private var deviceList = LinkedList<Device>()
 
     fun addDevice(device: Device):Boolean {
@@ -27,5 +31,15 @@ class DeviceAPI {
 
     fun fixDevice(index: Int) {
         deviceList[index].isFixed = true
+    }
+
+    @Throws(Exception::class)
+    fun load() {
+        deviceList = serializer.read() as LinkedList<Device>
+    }
+
+    @Throws(Exception::class)
+    fun store() {
+        serializer.write(deviceList)
     }
 }

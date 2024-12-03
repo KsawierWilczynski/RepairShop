@@ -7,9 +7,11 @@ import ie.setu.models.Employee
 import ie.setu.types.DeviceType
 import ie.setu.utils.readNextInt
 import ie.setu.utils.readNextLine
+import io.github.oshai.kotlinlogging.KotlinLogging
 
 private val deviceAPI = DeviceAPI()
 private val employeeAPI = EmployeeAPI()
+private val logger = KotlinLogging.logger {}
 
 fun main() {
     start()
@@ -17,6 +19,14 @@ fun main() {
 
 fun start() {
     do {
+
+        try {
+            deviceAPI.load()
+            employeeAPI.load()
+        } catch (e: Exception) {
+            logger.info { "loading config files failure. Is this your first time running?" }
+            logger.error { e }
+        }
         val option = mainMenu()
         when (option) {
             1 -> if (employeeAPI.numOfEmployees() <= 0) println("No Employees for Repair...") else {
@@ -32,6 +42,7 @@ fun start() {
                         0 -> println("Exiting Repairs...")
                         else -> println("Invalid Option Entered: $option")
                     }
+                    deviceAPI.store()
                 } while (repairOption != 0)
             }
             2 -> do {
@@ -43,6 +54,7 @@ fun start() {
                         0 -> println("Exiting Employees...")
                         else -> println("Invalid Option Entered: $option")
                     }
+                    employeeAPI.store()
                 } while (employeeOption != 0)
 
             0 -> println("Exiting...")
