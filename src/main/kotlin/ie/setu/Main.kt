@@ -27,7 +27,8 @@ fun start() {
                         2 -> println(deviceAPI.listOfDevices())
                         3 -> removeRepair()
                         4 -> getDeviceByEmployee()
-                        5 -> setDeviceToRepaired()
+                        5 -> getDeviceByType()
+                        6 -> setDeviceToRepaired()
                         0 -> println("Exiting Repairs...")
                         else -> println("Invalid Option Entered: $option")
                     }
@@ -75,7 +76,8 @@ fun repairMenu(): Int {
          > |   2) List repairs             |
          > |   3) Remove a repair          |
          > |   4) List repairs by employee |
-         > |   5) Finish a repair          |
+         > |   5) List repairs by type     |
+         > |   6) Finish a repair          |
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
@@ -172,14 +174,33 @@ fun getDeviceByEmployee() {
             println(employeeAPI.listOfEmployees())
             input = readNextInt("Please enter employee index")
         }
-        val employee = employeeAPI.getEmployeeByIndex(input);
+        val employee = employeeAPI.getEmployeeByIndex(input)
         if (employee == null) {
             println("Something has gone wrong")
-            return;
+            return
         }
         println(deviceAPI.getDeviceByEmployee(employee))
     } else {
         println("No selections available")
+    }
+}
+
+fun getDeviceByType() {
+    if (deviceAPI.numOfDevices() > 0) {
+        var deviceType: Int
+        do {
+             deviceType = readNextInt("Please Select device type:\n1. Phone\n2. Tablet\n3. Laptop\n4. Desktop\n")
+        } while (0 > deviceType || deviceType > 4)
+        var deviceTypeConstructor: DeviceType = DeviceType.PHONE
+        when (deviceType) {
+            1 -> deviceTypeConstructor = DeviceType.PHONE
+            2 -> deviceTypeConstructor = DeviceType.TABLET
+            3 -> deviceTypeConstructor = DeviceType.LAPTOP
+            4 -> deviceTypeConstructor = DeviceType.DESKTOP
+        }
+        println(deviceAPI.getDeviceByType(deviceTypeConstructor))
+    } else {
+        println("No devices")
     }
 }
 
