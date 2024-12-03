@@ -119,5 +119,11 @@ fun addRepair() {
 }
 
 fun removeRepair() {
-
+    println(deviceAPI.listOfDevices())
+    val index = readNextInt("Please enter device index to remove:")
+    if (index < 0 && index+1 >= deviceAPI.numOfDevices()) {
+        println("Invalid Device Index")
+    } else {
+        println("Removed: ${deviceAPI.removeDevice(index)}")
+    }
 }
