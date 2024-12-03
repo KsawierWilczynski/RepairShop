@@ -1,9 +1,9 @@
 package ie.setu.controllers
 
 import ie.setu.models.Employee
-import ie.setu.controllers.EmployeeAPI
 import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
@@ -35,7 +35,6 @@ class EmployeeAPITest {
 
     @Nested
     inner class AddEmployee {
-
         @Test
         fun `Adding employee to an already populated list`() {
             assertEquals(2, populatedEmployees!!.numOfEmployees())
@@ -53,7 +52,6 @@ class EmployeeAPITest {
 
     @Nested
     inner class ListEmployee {
-
         @Test
         fun `Listing employees in an empty list returns no employees`() {
             assertEquals(0, emptyEmployees!!.numOfEmployees())
@@ -71,11 +69,16 @@ class EmployeeAPITest {
 
     @Nested
     inner class RemoveEmployee {
-
         @Test
         fun `Removing an employee removes them from a populated list`() {
             assertEquals(2, populatedEmployees!!.numOfEmployees())
-            assertTrue(populatedEmployees!!.removeEmployee(0)!!.name.lowercase().contains("doe"))
+            assertTrue(
+                populatedEmployees!!
+                    .removeEmployee(0)!!
+                    .name
+                    .lowercase()
+                    .contains("doe"),
+            )
             assertEquals(1, populatedEmployees!!.numOfEmployees())
         }
 
@@ -91,7 +94,13 @@ class EmployeeAPITest {
     inner class ListByIndex {
         @Test
         fun `Listing an employee returns correct employee`() {
-            assertTrue(populatedEmployees!!.getEmployeeByIndex(0)!!.name.lowercase().contains("doe"))
+            assertTrue(
+                populatedEmployees!!
+                    .getEmployeeByIndex(0)!!
+                    .name
+                    .lowercase()
+                    .contains("doe"),
+            )
         }
 
         @Test
@@ -100,4 +109,3 @@ class EmployeeAPITest {
         }
     }
 }
-

@@ -4,16 +4,13 @@ import ie.setu.models.Employee
 import ie.setu.persistance.JSONSerializer
 import ie.setu.utils.formatListString
 import java.io.File
-import java.util.*
+import java.util.LinkedList
 
 class EmployeeAPI {
-
     private var serializer: JSONSerializer = JSONSerializer(File("Employees.json"))
     private var employeeList = LinkedList<Employee>()
 
-    fun addEmployee(employee: Employee):Boolean {
-         return employeeList.add(employee)
-    }
+    fun addEmployee(employee: Employee): Boolean = employeeList.add(employee)
 
     fun listOfEmployees(): String = if (employeeList.isEmpty()) "No Employees" else formatListString(employeeList)
 
