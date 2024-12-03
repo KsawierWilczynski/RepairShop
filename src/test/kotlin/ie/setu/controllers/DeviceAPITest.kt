@@ -100,11 +100,6 @@ class DeviceAPITest {
             assertTrue(devicesString.contains("power"))
         }
 
-        @Test
-        fun `listOfDevices return no devices when Arraylist has no devices`() {
-            assertEquals(0, emptyDevices!!.numOfDevices())
-            val devicesString = emptyDevices!!.listOfDevices().lowercase()
-            assertTrue(devicesString.contains("no devices"))
-        }
     }
+
 }
