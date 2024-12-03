@@ -19,7 +19,6 @@ fun main() {
 
 fun start() {
     do {
-
         try {
             deviceAPI.load()
             employeeAPI.load()
@@ -29,33 +28,36 @@ fun start() {
         }
         val option = mainMenu()
         when (option) {
-            1 -> if (employeeAPI.numOfEmployees() <= 0) println("No Employees for Repair...") else {
-                do {
-                    val repairOption = repairMenu()
-                    when (repairOption) {
-                        1 -> addRepair()
-                        2 -> println(deviceAPI.listOfDevices())
-                        3 -> removeRepair()
-                        4 -> getDeviceByEmployee()
-                        5 -> getDeviceByType()
-                        6 -> setDeviceToRepaired()
-                        0 -> println("Exiting Repairs...")
-                        else -> println("Invalid Option Entered: $option")
-                    }
-                    deviceAPI.store()
-                } while (repairOption != 0)
-            }
+            1 ->
+                if (employeeAPI.numOfEmployees() <= 0) {
+                    println("No Employees for Repair...")
+                } else {
+                    do {
+                        val repairOption = repairMenu()
+                        when (repairOption) {
+                            1 -> addRepair()
+                            2 -> println(deviceAPI.listOfDevices())
+                            3 -> removeRepair()
+                            4 -> getDeviceByEmployee()
+                            5 -> getDeviceByType()
+                            6 -> setDeviceToRepaired()
+                            0 -> println("Exiting Repairs...")
+                            else -> println("Invalid Option Entered: $option")
+                        }
+                        deviceAPI.store()
+                    } while (repairOption != 0)
+                }
             2 -> do {
-                    val employeeOption = employeeMenu()
-                    when (employeeOption) {
-                        1 -> addEmployee()
-                        2 -> println(employeeAPI.listOfEmployees())
-                        3 -> removeEmployee()
-                        0 -> println("Exiting Employees...")
-                        else -> println("Invalid Option Entered: $option")
-                    }
-                    employeeAPI.store()
-                } while (employeeOption != 0)
+                val employeeOption = employeeMenu()
+                when (employeeOption) {
+                    1 -> addEmployee()
+                    2 -> println(employeeAPI.listOfEmployees())
+                    3 -> removeEmployee()
+                    0 -> println("Exiting Employees...")
+                    else -> println("Invalid Option Entered: $option")
+                }
+                employeeAPI.store()
+            } while (employeeOption != 0)
 
             0 -> println("Exiting...")
             else -> println("Invalid Option Entered: $option")
@@ -64,7 +66,8 @@ fun start() {
 }
 
 fun mainMenu(): Int {
-    println("""
+    println(
+        """
         > ----------------------------------
          > |        Repair Shop UI         |
          > ----------------------------------
@@ -74,12 +77,14 @@ fun mainMenu(): Int {
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
-    """.trimMargin(">"))
+    """.trimMargin(">"),
+    )
     return readNextInt("==>> ")
 }
 
 fun repairMenu(): Int {
-    println("""
+    println(
+        """
         > ----------------------------------
          > |       Repair Options UI       |
          > ----------------------------------
@@ -93,12 +98,14 @@ fun repairMenu(): Int {
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
-    """.trimMargin(">"))
+    """.trimMargin(">"),
+    )
     return readNextInt("==>> ")
 }
 
 fun employeeMenu(): Int {
-    println("""
+    println(
+        """
         > ----------------------------------
          > |     Employee Options UI       |
          > ----------------------------------
@@ -109,7 +116,8 @@ fun employeeMenu(): Int {
          > ---------------------------------
          > |   0) Exit                     |
          > ---------------------------------
-    """.trimMargin(">"))
+    """.trimMargin(">"),
+    )
     return readNextInt("==>> ")
 }
 
@@ -166,7 +174,7 @@ fun addRepair() {
 }
 
 fun removeRepair() {
-    if(deviceAPI.numOfDevices() > 0) {
+    if (deviceAPI.numOfDevices() > 0) {
         println(deviceAPI.listOfDevices())
         val index = readNextInt("Please enter device index to remove: ")
         if (index < 0 || index >= deviceAPI.numOfDevices()) {
@@ -201,7 +209,7 @@ fun getDeviceByType() {
     if (deviceAPI.numOfDevices() > 0) {
         var deviceType: Int
         do {
-             deviceType = readNextInt("Please Select device type:\n1. Phone\n2. Tablet\n3. Laptop\n4. Desktop\n")
+            deviceType = readNextInt("Please Select device type:\n1. Phone\n2. Tablet\n3. Laptop\n4. Desktop\n")
         } while (0 > deviceType || deviceType > 4)
         var deviceTypeConstructor: DeviceType = DeviceType.PHONE
         when (deviceType) {

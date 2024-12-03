@@ -7,5 +7,5 @@ data class Device(
     val type: DeviceType,
     var issue: String,
     var employee: Employee,
-    var isFixed: Boolean = false
+    var isFixed: Boolean = false,
 )
