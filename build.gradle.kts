@@ -21,8 +21,6 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.16")
     implementation("com.thoughtworks.xstream:xstream:1.4.21")
     implementation("org.codehaus.jettison:jettison:1.5.4")
-    // https://mvnrepository.com/artifact/org.jlleitschuh.gradle/ktlint-gradle
-    implementation("org.jlleitschuh.gradle:ktlint-gradle:12.1.1")
     implementation("org.jetbrains.dokka:dokka-gradle-plugin:1.9.20")
 }
 
