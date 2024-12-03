@@ -15,7 +15,9 @@ class DeviceAPI {
 
     fun numOfDevices(): Int = deviceList.size
 
-    fun removeDevice(index: Int): Device = deviceList.removeAt(index)
+    fun removeDevice(index: Int): Device? = if (index+1 >= deviceList.size) { null } else deviceList.removeAt(index)
+
+    fun getDeviceByIndex(index: Int): Device? = if (index+1 >= deviceList.size) { null } else deviceList[index]
 
     fun fixDevice(index: Int) {
         deviceList[index].isFixed = true
