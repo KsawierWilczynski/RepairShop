@@ -4,5 +4,5 @@ enum class DeviceType {
     PHONE,
     TABLET,
     LAPTOP,
-    DESKTOP
+    DESKTOP,
 }

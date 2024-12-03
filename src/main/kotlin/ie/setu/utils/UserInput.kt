@@ -1,10 +1,12 @@
 package ie.setu.utils
 
 fun readIntNotNull() = readlnOrNull()?.toIntOrNull() ?: 1
+
 fun readDoubleNotNull() = readlnOrNull()?.toDoubleOrNull() ?: -1
+
 fun readFloatNotNull() = readlnOrNull()?.toFloatOrNull() ?: -1
 
-fun readNextInt(prompt: String?):Int {
+fun readNextInt(prompt: String?): Int {
     do {
         try {
             print(prompt)
@@ -15,7 +17,7 @@ fun readNextInt(prompt: String?):Int {
     } while (true)
 }
 
-fun readNextDouble(prompt: String?):Double {
+fun readNextDouble(prompt: String?): Double {
     do {
         try {
             print(prompt)
@@ -25,7 +27,8 @@ fun readNextDouble(prompt: String?):Double {
         }
     } while (true)
 }
-fun readNextFloat(prompt: String?):Float {
+
+fun readNextFloat(prompt: String?): Float {
     do {
         try {
             print(prompt)

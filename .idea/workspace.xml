@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Quick Fix for fixDevice in case of index out of bounds">
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Added Dokka Comments">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/models/Device.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/models/Device.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/models/Employee.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/models/Employee.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/JSONSerializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/JSONSerializer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/Serializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/Serializer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/types/DeviceType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/types/DeviceType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/ListUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/ListUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/UserInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/UserInput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/DeviceAPITest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/DeviceAPITest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/EmployeeAPITest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/EmployeeAPITest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +56,13 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RepairShop" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="formatting" type="c8890929:TasksNode$1" />
+              </path>
+
             </expand>
             <select />
           </tree_state>
@@ -67,6 +87,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -80,11 +103,11 @@
   "keyToString": {
     "Gradle.Build RepairShop.executor": "Run",
     "Gradle.RepairShop [dokkaHtml].executor": "Run",
+    "Gradle.RepairShop [ktlintFormat].executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Dokka",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu/utils",
     "node.js.detected.package.eslint": "true",
@@ -92,6 +115,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.ktlint-plugin",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -106,7 +130,6 @@
       <recent name="ie.setu.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RepairShop [dokkaHtml]">
     <configuration name="RepairShop [dokkaHtml]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,6 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732922704407</updated>
       <workItem from="1732922705640" duration="3701000" />
+      <workItem from="1733258321210" duration="231000" />
     </task>
     <task id="LOCAL-00001" summary="Added addEmployee() function to menu">
       <option name="closed" value="true" />
@@ -288,7 +312,6 @@
     <MESSAGE value="Add get device by type" />
     <MESSAGE value="Add Dokka" />
     <MESSAGE value="Quick Fix for fixDevice in case of index out of bounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quick Fix for fixDevice in case of index out of bounds" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepairShop$EmployeeAPITest.ic" NAME="EmployeeAPITest Coverage Results" MODIFIED="1733254330684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

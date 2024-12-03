@@ -1,10 +1,12 @@
 package ie.setu.controllers
 
 import ie.setu.models.Device
-import ie.setu.types.DeviceType
 import ie.setu.models.Employee
+import ie.setu.types.DeviceType
 import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
@@ -99,16 +101,20 @@ class DeviceAPITest {
             assertTrue(devicesString.contains("webcam"))
             assertTrue(devicesString.contains("power"))
         }
-
     }
 
     @Nested
     inner class RemoveDevice {
-
         @Test
         fun `Removing a device removes them from a populated list`() {
             assertEquals(8, populatedDevices!!.numOfDevices())
-            assertTrue(populatedDevices!!.removeDevice(0)!!.issue.lowercase().contains("screen"))
+            assertTrue(
+                populatedDevices!!
+                    .removeDevice(0)!!
+                    .issue
+                    .lowercase()
+                    .contains("screen"),
+            )
             assertEquals(7, populatedDevices!!.numOfDevices())
         }
 
@@ -124,7 +130,13 @@ class DeviceAPITest {
     inner class ListByIndex {
         @Test
         fun `Listing a device returns correct device`() {
-            assertTrue(populatedDevices!!.getDeviceByIndex(0)!!.issue.lowercase().contains("screen"))
+            assertTrue(
+                populatedDevices!!
+                    .getDeviceByIndex(0)!!
+                    .issue
+                    .lowercase()
+                    .contains("screen"),
+            )
         }
 
         @Test
@@ -149,7 +161,6 @@ class DeviceAPITest {
 
     @Nested
     inner class ListByEmployee {
-
         @Test
         fun `Listing by employee with repairs in populated list shows devices`() {
             assertTrue(populatedDevices!!.getDeviceByEmployee(employee!!).lowercase().contains("memory"))
@@ -158,7 +169,7 @@ class DeviceAPITest {
 
         @Test
         fun `Listing by employee with no repairs in populated list shows no devices`() {
-            val employeeTest = Employee(1231223123, "aaa", "aeaea")
+            val employeeTest = Employee(1231223123, "aaa", "StreetEasy")
             assertFalse(populatedDevices!!.getDeviceByEmployee(employeeTest).lowercase().contains("memory"))
             assertFalse(populatedDevices!!.getDeviceByEmployee(employeeTest).lowercase().contains("webcam"))
         }
@@ -167,6 +178,5 @@ class DeviceAPITest {
         fun `Listing by employee in empty list returns no devices`() {
             assertTrue(emptyDevices!!.getDeviceByEmployee(employee!!).lowercase().contains("no devices"))
         }
-
     }
 }

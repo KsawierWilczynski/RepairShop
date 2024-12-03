@@ -14,7 +14,6 @@ import java.util.LinkedList
  * through JSON serialization.
  */
 class DeviceAPI {
-
     private var serializer: JSONSerializer = JSONSerializer(File("Devices.json"))
     private var deviceList = LinkedList<Device>()
 
@@ -24,9 +23,7 @@ class DeviceAPI {
      * @param device The [Device] to be added.
      * @return `true` if the device is successfully added, `false` otherwise.
      */
-    fun addDevice(device: Device): Boolean {
-        return deviceList.add(device)
-    }
+    fun addDevice(device: Device): Boolean = deviceList.add(device)
 
     /**
      * Retrieves a formatted string representation of all devices in the collection.
@@ -48,7 +45,12 @@ class DeviceAPI {
      * @param index The index of the [Device] to remove.
      * @return The removed [Device], or `null` if the index is invalid.
      */
-    fun removeDevice(index: Int): Device? = if (index < 0 || index >= deviceList.size) { null } else deviceList.removeAt(index)
+    fun removeDevice(index: Int): Device? =
+        if (index < 0 || index >= deviceList.size) {
+            null
+        } else {
+            deviceList.removeAt(index)
+        }
 
     /**
      * Retrieves a [Device] from the collection by its index.
@@ -56,9 +58,12 @@ class DeviceAPI {
      * @param index The index of the [Device] to retrieve.
      * @return The [Device] at the specified index, or `null` if the index is invalid.
      */
-    fun getDeviceByIndex(index: Int): Device? = if (index < 0 || index >= deviceList.size) {
-        null
-    } else deviceList[index]
+    fun getDeviceByIndex(index: Int): Device? =
+        if (index < 0 || index >= deviceList.size) {
+            null
+        } else {
+            deviceList[index]
+        }
 
     /**
      * Filters devices by their [DeviceType] and retrieves a formatted string of the results.
@@ -67,9 +72,17 @@ class DeviceAPI {
      * @return A string of matching devices, or "No Devices Stores" if none match or the collection is empty.
      */
     fun getDeviceByType(deviceType: DeviceType): String =
-        if (deviceList.isEmpty()) "No Devices Stores" else formatListString(
-            deviceList.stream().filter { it.type == deviceType }.toList()
-        )
+        if (deviceList.isEmpty()) {
+            "No Devices Stores"
+        } else {
+            formatListString(
+                deviceList
+                    .stream()
+                    .filter {
+                        it.type == deviceType
+                    }.toList(),
+            )
+        }
 
     /**
      * Filters devices by their assigned [Employee] and retrieves a formatted string of the results.
@@ -78,9 +91,18 @@ class DeviceAPI {
      * @return A string of matching devices, or "No Devices Stores" if none match or the collection is empty.
      */
     fun getDeviceByEmployee(employee: Employee): String =
-        if (deviceList.isEmpty()) "No Devices Stores" else formatListString(
-            deviceList.stream().filter { it.employee == employee }.toList()
-        )
+        if (deviceList.isEmpty()) {
+            "No Devices Stores"
+        } else {
+            formatListString(
+                deviceList
+                    .stream()
+                    .filter {
+                        it.employee == employee
+                    }.toList(),
+            )
+        }
+
 
     /**
      * Marks a device as fixed based on its index.

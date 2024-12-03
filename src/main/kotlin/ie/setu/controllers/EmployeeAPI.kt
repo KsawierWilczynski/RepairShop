@@ -4,7 +4,7 @@ import ie.setu.models.Employee
 import ie.setu.persistance.JSONSerializer
 import ie.setu.utils.formatListString
 import java.io.File
-import java.util.*
+import java.util.LinkedList
 
 /**
  * Manages a collection of employees, providing functionality for adding,
@@ -12,7 +12,6 @@ import java.util.*
  * using JSON serialization.
  */
 class EmployeeAPI {
-
     private var serializer: JSONSerializer = JSONSerializer(File("Employees.json"))
     private var employeeList = LinkedList<Employee>()
 
@@ -22,9 +21,7 @@ class EmployeeAPI {
      * @param employee The [Employee] to be added.
      * @return `true` if the employee is successfully added, `false` otherwise.
      */
-    fun addEmployee(employee: Employee): Boolean {
-        return employeeList.add(employee)
-    }
+   fun addEmployee(employee: Employee): Boolean = employeeList.add(employee)
 
     /**
      * Retrieves a formatted string representation of all employees in the collection.
