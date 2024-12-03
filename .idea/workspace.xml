@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update git ignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update persistence and serializer for new models">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DeviceAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/EmployeeAPI.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +82,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "JaCoCo",
+    "git-widget-placeholder": "Persistance",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu/utils",
+    "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,6 +95,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ksawier\OneDrive - South East Technological University (Waterford Campus)\SDT1\Week02\RepairShop\src\main\kotlin\ie\setu" />
       <recent name="C:\Users\Ksawier\OneDrive - South East Technological University (Waterford Campus)\SDT1\Week02\RepairShop\src\main\kotlin\ie\setu\utils" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -224,6 +233,8 @@
         <item itemvalue="Gradle.ListByEmployee.Listing by employee with no repairs in populated list shows no devices" />
         <item itemvalue="Gradle.ListByEmployee.Listing by employee existing shows devices" />
         <item itemvalue="Gradle.ListByType.Listing by type when no devices returns no devices" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -357,6 +368,31 @@
       <updated>1733256121291</updated>
     </task>
     <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00011" summary="Add persistence serializer">
+      <option name="closed" value="true" />
+      <created>1733251344537</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251344537</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add persistence dependencies">
+      <option name="closed" value="true" />
+      <created>1733251356876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251356876</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update persistence and serializer for new models">
+      <option name="closed" value="true" />
+      <created>1733251597886</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251597886</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,5 +430,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepairShop$EmployeeAPITest.ic" NAME="EmployeeAPITest Coverage Results" MODIFIED="1733254330684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RepairShop$DeviceAPITest.ic" NAME="DeviceAPITest Coverage Results" MODIFIED="1733255413622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <MESSAGE value="Add persistence serializer" />
+    <MESSAGE value="Add persistence dependencies" />
+    <MESSAGE value="Update persistence and serializer for new models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update persistence and serializer for new models" />
   </component>
 </project>
