@@ -4,6 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update git ignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update persistence and serializer for new models">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -61,10 +63,25 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build RepairShop.executor": "Run",
+    "Gradle.DeviceAPITest.executor": "Coverage",
+    "Gradle.EmployeeAPITest.executor": "Coverage",
+    "Gradle.ListByEmployee.Listing by employee existing shows devices.executor": "Run",
+    "Gradle.ListByEmployee.Listing by employee in empty list returns no devices.executor": "Run",
+    "Gradle.ListByEmployee.Listing by employee with no repairs in populated list shows no devices.executor": "Run",
+    "Gradle.ListByIndex.Listing an employee from a empty list does nothing.executor": "Run",
+    "Gradle.ListByIndex.Listing an employee returns correct employee.executor": "Run",
+    "Gradle.ListByIndex.executor": "Run",
+    "Gradle.ListByType.Listing by type when no devices returns no devices.executor": "Run",
+    "Gradle.ListByType.Listing device by type selects correct type.executor": "Run",
+    "Gradle.RemoveDevice.Removing a device removes them from a populated list.executor": "Run",
+    "Gradle.RemoveDevice.executor": "Run",
+    "Gradle.RemoveEmployee.Removing an employee from an empty list does nothing.executor": "Run",
+    "Gradle.RemoveEmployee.Removing an employee removes them from a populated list.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "JaCoCo",
     "git-widget-placeholder": "Persistance",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu",
@@ -88,16 +105,134 @@
       <recent name="ie.setu.utils" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ie.setu.MainKt" />
-      <module name="RepairShop.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.DeviceAPITest">
+    <configuration name="DeviceAPITest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ie.setu.controllers.DeviceAPITest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListByEmployee.Listing by employee existing shows devices" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ie.setu.controllers.DeviceAPITest$ListByEmployee.Listing by employee existing shows devices&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListByEmployee.Listing by employee in empty list returns no devices" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ie.setu.controllers.DeviceAPITest$ListByEmployee.Listing by employee in empty list returns no devices&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListByEmployee.Listing by employee with no repairs in populated list shows no devices" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ie.setu.controllers.DeviceAPITest$ListByEmployee.Listing by employee with no repairs in populated list shows no devices&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListByType.Listing by type when no devices returns no devices" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ie.setu.controllers.DeviceAPITest$ListByType.Listing by type when no devices returns no devices&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DeviceAPITest" />
+        <item itemvalue="Gradle.ListByEmployee.Listing by employee in empty list returns no devices" />
+        <item itemvalue="Gradle.ListByEmployee.Listing by employee with no repairs in populated list shows no devices" />
+        <item itemvalue="Gradle.ListByEmployee.Listing by employee existing shows devices" />
+        <item itemvalue="Gradle.ListByType.Listing by type when no devices returns no devices" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -200,6 +335,39 @@
       <option name="project" value="LOCAL" />
       <updated>1733249964051</updated>
     </task>
+    <task id="LOCAL-00011" summary="Added JaCoCo Dependancy">
+      <option name="closed" value="true" />
+      <created>1733253660583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733253660583</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added tests after jacoco coverage report">
+      <option name="closed" value="true" />
+      <created>1733255899389</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733255899389</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update git ignore">
+      <option name="closed" value="true" />
+      <created>1733256101795</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733256101795</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update git ignore">
+      <option name="closed" value="true" />
+      <created>1733256121291</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733256121291</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <task id="LOCAL-00011" summary="Add persistence serializer">
       <option name="closed" value="true" />
       <created>1733251344537</created>
@@ -254,6 +422,14 @@
     <MESSAGE value="list repairs by employee" />
     <MESSAGE value="set device to repaired function" />
     <MESSAGE value="Add get device by type" />
+    <MESSAGE value="Added JaCoCo Dependancy" />
+    <MESSAGE value="Added tests after jacoco coverage report" />
+    <MESSAGE value="Update git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update git ignore" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RepairShop$EmployeeAPITest.ic" NAME="EmployeeAPITest Coverage Results" MODIFIED="1733254330684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RepairShop$DeviceAPITest.ic" NAME="DeviceAPITest Coverage Results" MODIFIED="1733255413622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <MESSAGE value="Add persistence serializer" />
     <MESSAGE value="Add persistence dependencies" />
     <MESSAGE value="Update persistence and serializer for new models" />

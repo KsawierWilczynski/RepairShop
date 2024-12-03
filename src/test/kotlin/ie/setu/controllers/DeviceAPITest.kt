@@ -102,4 +102,71 @@ class DeviceAPITest {
 
     }
 
+    @Nested
+    inner class RemoveDevice {
+
+        @Test
+        fun `Removing a device removes them from a populated list`() {
+            assertEquals(8, populatedDevices!!.numOfDevices())
+            assertTrue(populatedDevices!!.removeDevice(0)!!.issue.lowercase().contains("screen"))
+            assertEquals(7, populatedDevices!!.numOfDevices())
+        }
+
+        @Test
+        fun `Removing a device from an empty list does nothing`() {
+            assertEquals(0, emptyDevices!!.numOfDevices())
+            assertEquals(null, emptyDevices!!.removeDevice(0))
+            assertEquals(0, emptyDevices!!.numOfDevices())
+        }
+    }
+
+    @Nested
+    inner class ListByIndex {
+        @Test
+        fun `Listing a device returns correct device`() {
+            assertTrue(populatedDevices!!.getDeviceByIndex(0)!!.issue.lowercase().contains("screen"))
+        }
+
+        @Test
+        fun `Listing an device from a empty list does nothing`() {
+            assertEquals(null, emptyDevices!!.getDeviceByIndex(0))
+        }
+    }
+
+    @Nested
+    inner class ListByType {
+        @Test
+        fun `Listing device by type selects correct type`() {
+            assertTrue(populatedDevices!!.getDeviceByType(DeviceType.DESKTOP).lowercase().contains("memory"))
+            assertTrue(populatedDevices!!.getDeviceByType(DeviceType.LAPTOP).lowercase().contains("webcam"))
+        }
+
+        @Test
+        fun `Listing by type when no devices returns no devices`() {
+            assertTrue(emptyDevices!!.getDeviceByType(DeviceType.DESKTOP).lowercase().contains("no devices"))
+        }
+    }
+
+    @Nested
+    inner class ListByEmployee {
+
+        @Test
+        fun `Listing by employee with repairs in populated list shows devices`() {
+            assertTrue(populatedDevices!!.getDeviceByEmployee(employee!!).lowercase().contains("memory"))
+            assertTrue(populatedDevices!!.getDeviceByEmployee(employee!!).lowercase().contains("webcam"))
+        }
+
+        @Test
+        fun `Listing by employee with no repairs in populated list shows no devices`() {
+            val employeeTest = Employee(1231223123, "aaa", "aeaea")
+            assertFalse(populatedDevices!!.getDeviceByEmployee(employeeTest).lowercase().contains("memory"))
+            assertFalse(populatedDevices!!.getDeviceByEmployee(employeeTest).lowercase().contains("webcam"))
+        }
+
+        @Test
+        fun `Listing by employee in empty list returns no devices`() {
+            assertTrue(emptyDevices!!.getDeviceByEmployee(employee!!).lowercase().contains("no devices"))
+        }
+
+    }
 }
