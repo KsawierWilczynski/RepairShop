@@ -3,7 +3,6 @@ package ie.setu
 import ie.setu.controllers.DeviceAPI
 import ie.setu.controllers.EmployeeAPI
 import ie.setu.models.Employee
-import ie.setu.utils.readIntNotNull
 import ie.setu.utils.readNextInt
 import ie.setu.utils.readNextLine
 
