@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Add get device by type">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/JSONSerializer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/Serializer.kt" afterDir="false" />
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Add persistence dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/JSONSerializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/JSONSerializer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/Serializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/persistance/Serializer.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733249964051</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add persistence serializer">
+      <option name="closed" value="true" />
+      <created>1733251344537</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251344537</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add persistence dependencies">
+      <option name="closed" value="true" />
+      <created>1733251356876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251356876</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +243,8 @@
     <MESSAGE value="list repairs by employee" />
     <MESSAGE value="set device to repaired function" />
     <MESSAGE value="Add get device by type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add get device by type" />
+    <MESSAGE value="Add persistence serializer" />
+    <MESSAGE value="Add persistence dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add persistence dependencies" />
   </component>
 </project>
