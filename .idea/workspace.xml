@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Added tests after jacoco coverage report">
+    <list default="true" id="418f783b-7c3c-49ad-af80-b25360cc8d0e" name="Changes" comment="Update git ignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -340,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733255899389</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update git ignore">
+      <option name="closed" value="true" />
+      <created>1733256101795</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733256101795</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +380,8 @@
     <MESSAGE value="Add get device by type" />
     <MESSAGE value="Added JaCoCo Dependancy" />
     <MESSAGE value="Added tests after jacoco coverage report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests after jacoco coverage report" />
+    <MESSAGE value="Update git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update git ignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepairShop$EmployeeAPITest.ic" NAME="EmployeeAPITest Coverage Results" MODIFIED="1733254330684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
