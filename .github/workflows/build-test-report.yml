@@ -77,6 +77,10 @@ jobs:
     
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it 
       - uses: actions/checkout@v4
+
+      # Adds permission to run gradle
+      - name: Add permissions for gradle
+        run: chmod +x gradlew
       
       # Runs the Gradle dokkaHtml task
       - name: Dokka with Gradle
