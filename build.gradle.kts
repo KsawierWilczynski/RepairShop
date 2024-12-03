@@ -23,6 +23,7 @@ dependencies {
     implementation("org.codehaus.jettison:jettison:1.5.4")
     // https://mvnrepository.com/artifact/org.jlleitschuh.gradle/ktlint-gradle
     implementation("org.jlleitschuh.gradle:ktlint-gradle:12.1.1")
+    implementation("org.jetbrains.dokka:dokka-gradle-plugin:1.9.20")
 }
 
 tasks.test {

@@ -62,6 +62,7 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="formatting" type="c8890929:TasksNode$1" />
               </path>
+
             </expand>
             <select />
           </tree_state>
@@ -107,7 +108,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Linting",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ksawier/OneDrive - South East Technological University (Waterford Campus)/SDT1/Week02/RepairShop/src/main/kotlin/ie/setu/utils",
     "node.js.detected.package.eslint": "true",
@@ -130,7 +130,6 @@
       <recent name="ie.setu.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RepairShop [ktlintFormat]">
     <configuration name="RepairShop [dokkaHtml]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,28 +152,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RepairShop [ktlintFormat]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="ktlintFormat" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.setu.MainKt" />
       <module name="RepairShop.main" />
@@ -184,8 +161,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RepairShop [ktlintFormat]" />
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.RepairShop [dokkaHtml]" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -305,15 +280,7 @@
       <option name="project" value="LOCAL" />
       <updated>1733256820301</updated>
     </task>
-    <task id="LOCAL-00013" summary="Added Dokka Comments">
-      <option name="closed" value="true" />
-      <created>1733257275267</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1733257275267</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,12 +312,6 @@
     <MESSAGE value="Add get device by type" />
     <MESSAGE value="Add Dokka" />
     <MESSAGE value="Quick Fix for fixDevice in case of index out of bounds" />
-    <MESSAGE value="Added Dokka Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Dokka Comments" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepairShop$EmployeeAPITest.ic" NAME="EmployeeAPITest Coverage Results" MODIFIED="1733254330684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
