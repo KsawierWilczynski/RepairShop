@@ -17,7 +17,7 @@
 
 1. Clone the repository:
 `
-git clone https://github.com/your-username/RepairShop.git
+git clone https://github.com/KsawierWilczynski/RepairShop.git
 cd RepairShop
 `
 2. Build the project:
